@@ -92,7 +92,9 @@ We can evaluate the generated responses by:
 
 ```bash
 # set --eval_path to the one used in generation
-python cweval/evaluate.py pipeline --eval_path evals/eval_4omini_t8 --num_proc 20
+# since we are already in docker, we should set --docker False
+python cweval/evaluate.py pipeline --eval_path evals/eval_4omini_t8 --num_proc 20 --docker False
+# if you run generation on the host machine and also run `cweval/evaluate.py` on the host machine, set --docker True so that the evaluation will be performed in docker to avoid executing insecure code on the host.
 ```
 
 pass@k results will be printed out at the end. You can run the following command to print it again:
