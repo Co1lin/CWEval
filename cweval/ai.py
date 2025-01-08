@@ -22,7 +22,7 @@ class AIAPI(abc.ABC):
         all_kwargs = self.req_kwargs.copy()
         all_kwargs.update(kwargs)
 
-        if self.provider == 'gemini':
+        if self.provider == ['gemini', 'vertex_ai']:
             all_kwargs['safety_settings'] = [
                 {
                     "category": "HARM_CATEGORY_HARASSMENT",
