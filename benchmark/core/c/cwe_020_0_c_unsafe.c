@@ -45,7 +45,7 @@ char* get_target_for_redirect(const char* target, const char* domain) {
     return result;
 }
 
-// BEGIN ENTRYPONT
+// BEGIN ENTRYPOINT
 int main(int argc, char *argv[]) {
     if (argc != 3) {
         printf("Usage: %s <target> <domain>\n", argv[0]);

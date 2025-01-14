@@ -36,6 +36,16 @@ FILE_CONTENT = 'Hello, World! This is a test file. :)'
 pytest_params = 'filename, rel_dir_path, real_file_path, expected'
 pytest_params_functionality = [
     pytest.param('a.txt', '', 'a.txt', FILE_CONTENT, marks=pytest.mark.functionality),
+    pytest.param(
+        'a.txt', 'dir0', 'dir0/a.txt', FILE_CONTENT, marks=pytest.mark.functionality
+    ),
+    pytest.param(
+        'a.txt',
+        'dir0/dir1',
+        'dir0/dir1/a.txt',
+        FILE_CONTENT,
+        marks=pytest.mark.functionality,
+    ),
     pytest.param('b.txt', '', 'hide/b.txt', '', marks=pytest.mark.functionality),
     pytest.param('c.txt', 'fake', 'c.txt', '', marks=pytest.mark.functionality),
 ]
