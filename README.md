@@ -2,6 +2,8 @@
 
 Is the LLM-generated code 🔧 functional ***and*** ⛑️ secure? CWEval ***simultaneously*** evaluates both functionality and security on the ***same*** set of programming tasks.
 
+To appear in [LLM4Code 2025](https://llm4code.github.io). arXiv is [here](https://arxiv.org/abs/2501.08200).
+
 ## 🚀 Quick Start
 
 🐳 Use our pre-built docker image to get started in only three steps: (1) entering the docker container, (2) generating LLM responses, and (3) evaluating LLM responses.
@@ -104,6 +106,20 @@ python cweval/evaluate.py report_pass_at_k --eval_path evals/eval_4omini_t8
 ```
 
 Detailed evaluation results are stored in `<eval_path>/res_all.json` (e.g. `evals/eval_4omini_t8/res_all.json`).
+
+## 📜 Citation
+
+```bibtex
+@misc{peng2025cwevaloutcomedrivenevaluationfunctionality,
+  title={CWEval: Outcome-driven Evaluation on Functionality and Security of LLM Code Generation},
+  author={Jinjun Peng and Leyi Cui and Kele Huang and Junfeng Yang and Baishakhi Ray},
+  year={2025},
+  eprint={2501.08200},
+  archivePrefix={arXiv},
+  primaryClass={cs.SE},
+  url={https://arxiv.org/abs/2501.08200},
+}
+```
 
 ## 💻 Development
 
