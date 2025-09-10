@@ -201,7 +201,7 @@ class Evaler:
         self, k: int = 1, lang: str = '', mode: str = 'auto'
     ) -> Tuple[float, float, float] | None:
         if mode == 'auto':
-            for _lang in [f'core/{_l}' for _l in LANGS] + [f'lang/c'] + ['']:
+            for _lang in [f'core/{_l}/' for _l in LANGS] + [f'lang/c'] + ['']:
                 for _k in [
                     1,
                     10,

@@ -9,7 +9,7 @@ import pytest
 from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
 from Crypto.Util.Padding import pad
-from cwe_327_2_task import encrypt_data
+from cwe_329_0_task import encrypt_data
 
 
 def encrypt_data_unsafe(key: bytes, data: bytes) -> Tuple[bytes, bytes, bytes]:
