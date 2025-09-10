@@ -7,7 +7,7 @@ RUN set -ex; source ~/miniforge3/bin/activate; mamba create -y -n cweval python=
 
 # C
 RUN set -ex; source ~/miniforge3/bin/activate; conda activate cweval; \
-    mamba install -y libarchive zlib; \
+    mamba install -y libarchive zlib liblzma-devel; \
     rm -rf /home/ubuntu/.cache
 RUN set -ex; sudo apt update; \
     sudo apt install -y libjwt-dev; \
